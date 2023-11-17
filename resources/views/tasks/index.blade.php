@@ -26,7 +26,9 @@
                         <span>{{ $task->description }}</span>
                     </td>
                     <td class="align-middle">
-                        <h6 class="mb-0"><span class="badge bg-danger">{{ $task->status }}</span></h6>
+                        @include('partials.status', [
+                            'task' => $task,
+                        ])
                     </td>
                     <td class="align-middle">
                         <a href="#!" class="btn btn-primary" data-mdb-toggle="tooltip" title="Edit">
